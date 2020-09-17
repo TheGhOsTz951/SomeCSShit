@@ -15,7 +15,6 @@ app.get('*', (req, res) => {
 })
 
 app.listen(listenPort, () => {
-    console.log(`Esempio di app che ascolta a http://localhost:${listenPort}`)
+    console.log(`Pagina web in ascolto su \x1b[91mhttp://localhost:${listenPort}`, '\x1b[0m')
+    console.log('\x1b[94mServer has started!', '\x1b[0m')
 })
-
-console.log('Server has started!')
