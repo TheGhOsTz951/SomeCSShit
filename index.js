@@ -1,23 +1,21 @@
-const http = require('http');
-const url = require('url');
-const fs = require('fs');
-const errorPage = 'HTML/404.html';
-const listenPort = 8080;
+const express = require('express')
+const app = express()
+const errorPage = '/public/html/404.html'
+const listenPort = 8080
 
-http.createServer(function (req, res) {
-    var q = url.parse(req.url, true);
-    var filename = "." + q.pathname;
+app.use(express.static('public'));
 
-    fs.readFile(filename, function(err, data) {
-        if (err) {
-            res.writeHead(404, {'Content-Type': 'text/html'});
-            return res.end("404 Not Found");
-        }
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/html/index.html')
+})
 
-        res.writeHead(200, {'Content-Type': 'text/html'});
-        res.write(data);
-        return res.end();
-    });
-}).listen(listenPort);
+app.get('*', (req, res) => {
+    //Se si sta richiedendo una risorsa che non esiste, DEVE ESSERE SEMPRE COME ULTIMO
+    res.status(404).sendFile(__dirname + errorPage)
+})
 
-console.log('Server has started!');
+app.listen(listenPort, () => {
+    console.log(`Esempio di app che ascolta a http://localhost:${listenPort}`)
+})
+
+console.log('Server has started!')
