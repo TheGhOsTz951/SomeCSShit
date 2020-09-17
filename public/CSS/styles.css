@@ -26,8 +26,8 @@ body {
 }
 
 .content {
-    box-shadow: 0pt 5pt 25pt 1pt rgb(156, 156, 156);
-    border: 1.2px solid gray;
+    box-shadow: 0pt 10pt 25pt 1pt rgb(156, 156, 156);
+    /*border: 1.2px solid gray;*/
     border-radius: 10px;
     padding: 10px;
     text-align: center;
