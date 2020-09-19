@@ -18,7 +18,7 @@ body {
 }
 
 .mid-content {
-    margin: 50px -30px 0;
+    margin: 40px -30px 0;
     display: flex;
     flex: 1;
     flex-wrap: wrap;
@@ -31,7 +31,7 @@ body {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-    margin: 10px 30px;
+    margin: 20px 30px;
     max-width: 500px;
 }
 
