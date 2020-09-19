@@ -3,28 +3,53 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #111525;
+    color: white;
 }
+
+/*--- Title Section ---*/
 
 .title {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 30px auto;
     font-family: 'Nanum Gothic', sans-serif;
+    padding: 30px 40px;
+    border-radius: 20px;
+    transition: box-shadow 2s;
 }
 
 .title h1 {
+    margin: 0 0 15px;
     text-align: center;
     font-size: 40px;
+    transition: color 2s;
 }
 
 .title p {
     font-size: 22px;
+    margin: 20px 0 0;
 }
 
 .title hr {
-    border: 0.1px solid gray;
+    border: 0.1px solid white;
+    margin: 0 auto;
+    width: 0%;
+    opacity: 0;
+    transition: width 2s, opacity 2s;
 }
 
-.title:hover p {
-    animation-name: strech;
-    animation-duration: 4s;
+.title:hover hr {
+    width: 70%;
+    opacity: 1;
+    transition: width 2s, opacity 1s;
 }
+
+.title:hover h1 {
+    color: violet;
+}
+
+.title:hover {
+    box-shadow: 0pt 0pt 9pt 0pt white;
+}
+
+/*--- Title Section ---*/

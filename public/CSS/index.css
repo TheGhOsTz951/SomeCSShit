@@ -47,6 +47,11 @@ body {
 
 .content hr {
     border: 0.1px solid gray;
+    width: 50%;
+    transition: width 2s;
+}
+
+.content:hover hr {
     width: 70%;
 }
 
