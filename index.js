@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const errorPage = '/public/html/404.html'
-const mainPath = '/public/html/index.html'
+const mainPath = '/public/html/home.html'
 const port = 8090
 
 app.use(express.static('public'));
